@@ -8,17 +8,25 @@
 	<title>Calculadora para conversão de temperatura</title>
 	<script type="text/javascript">
 		function calcular() {
-			var primeira_operacao = document.getElementById('operacao').value;
+				
+			var operacao = document.getElementById('operacao').innerHTML; //de
 
-			var valor = document.getElementById('valor').value;
+			var operacao2 = document.getElementById('operacao2').innerHTML; //para
 
-			valor = parseFloat(valor);
+			var entrada = document.getElementById('entrada').value;
 
-			var resultado = null;
-			
-					
+			entrada = parseFloat(entrada);
+
+			var fechou = operacao + operacao2;
+
+			var resultado;
+
+			resultado = entrada * 1.8 + 32;
+
+			alert(resultado);
+		
 		}
-		document.getElementById('resultado').value = resultado;
+		
 	</script>
 </head>
 <body>
@@ -30,8 +38,8 @@
 		<div class="row">
 			<div class="col-md-6">
 				<h3>De</h3>
-				<input id="valor" type="text" class="form-control" placeholder="Digite a temperatura">
-				<select class="form-control" id="operacao">
+				<input id="entrada" type="text" class="form-control" placeholder="Digite a temperatura">
+				<select id="operacao" class="form-control">
 					<option value="">Escolha a temperatura para conversão</option>
 					<option value="1">Celsius</option>
 					<option value="2">Fahrenheit</option>
@@ -41,7 +49,7 @@
 
 			<div class="col-md-6">
 				<h3>Para</h3>
-				<select class="form-control" id="operacao">
+				<select id="operacao2" class="form-control">
 					<option value="">Escolha a temperatura para conversão</option>
 					<option value="1">Celsius</option>
 					<option value="2">Fahrenheit</option>
