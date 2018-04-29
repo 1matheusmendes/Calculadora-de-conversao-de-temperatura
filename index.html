@@ -7,11 +7,14 @@
 
 	<title>Calculadora para conversão de temperatura</title>
 	<script type="text/javascript">
+
+			var resultado;
+
 		function calcular() {
 				
-			var operacao = document.getElementById('operacao').innerHTML; //de
+			var operacao = document.getElementById('operacao').value; //de
 
-			var operacao2 = document.getElementById('operacao2').innerHTML; //para
+			var operacao2 = document.getElementById('operacao2').value; //para
 
 			var entrada = document.getElementById('entrada').value;
 
@@ -19,14 +22,15 @@
 
 			var fechou = operacao + operacao2;
 
-			var resultado;
-
-			resultado = entrada * 1.8 + 32;
-
-			alert(resultado);
-		
+			resultado = entrada * 1.8 + 32;		
+			
+			//resultado=(entrada-32)/1.8;		
 		}
-		
+
+		function resultado(resultado) {
+			alert(resultado);
+		}
+			
 	</script>
 </head>
 <body>
